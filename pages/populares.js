@@ -1,8 +1,6 @@
 // import styled from "@emotion/styled";
-import React, { useEffect, useState, useContext } from "react";
+import React from "react";
 import Layout from "../components/layout/Layout";
-import { FirebaseContext } from "../firebase";
-import { doc, onSnapshot, getDocs, collection } from "firebase/firestore";
 import DetallesProducto from "../components/layout/DetallesProducto";
 import useProductos from "../hooks/useProductos";
 
@@ -10,8 +8,9 @@ import useProductos from "../hooks/useProductos";
   color: red;s
 `; */
 
-export default function Home() {
-  const { productos } = useProductos("creado");
+export default function Populares() {
+  const { productos } = useProductos("votos");
+
   return (
     <div>
       <Layout>
