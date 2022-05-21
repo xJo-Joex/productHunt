@@ -94,7 +94,7 @@ const CrearCuenta = () => {
           </Campo>
           {errores.password && <Error>{errores.password}</Error>}
           {error && <Error>{error}</Error>}
-          <InputSubmit type="submit" value="Crear Cuenta" />
+          <InputSubmit type="submit" value="Crear Cuenta" onClick=()=>Router.push("/") />
         </Formulario>
       </>
     </Layout>
